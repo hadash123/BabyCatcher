@@ -1,6 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+public enum ControllerType
+{
+    SLICE,
+    BUTTONS,
+}
 
 public class Trampoline : MonoBehaviour
 {
@@ -16,6 +23,7 @@ public class Trampoline : MonoBehaviour
     public SpriteRenderer renderer;
     public Rigidbody2D body;
 
+    float sideKof = 0;
     
     public float RealSpeed = 0;
     const float SPEED = 160;
@@ -24,8 +32,10 @@ public class Trampoline : MonoBehaviour
     int vectorOfPunchForce = 0;
     int vectorBackForce = 0;
 
+
     float widthScreen;
     public int  step;
+
 
     // Start is called before the first frame update
     //Initialize
@@ -63,7 +73,40 @@ public class Trampoline : MonoBehaviour
         if (Input.mousePosition.y > Screen.height * 0.7f) return;
         if (LevelInfoController.GetSingletone.IsPause) return;
         if (LevelInfoController.GetSingletone.gameOverBoolean) return;
-        this.transform.position = new Vector2 (Camera.main.ScreenToWorldPoint(Input.mousePosition).x, this.transform.position.y);
+
+        switch(GameModeController.CONTROLTYPE)
+        {
+            case ControllerType.SLICE:
+                this.transform.position = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, this.transform.position.y);
+                break;
+            case ControllerType.BUTTONS:
+                
+                Vector2 wordLength = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+                this.transform.position = new Vector2(this.transform.position.x + sideKof * wordLength.x*0.03f, this.transform.position.y);
+
+                break;
+        }
+        
+    }
+    private void Update()
+    {
+        
+        //Debug.Log(sideKof);
+        
+    }
+
+    public void Move(int l)
+    {
+        sideKof = l;
+        AnimatorSwither(Fireman1, 1);
+        AnimatorSwither(Fireman2, 1);
+    }
+
+    public void Stop()
+    {
+        sideKof = 0;
+        AnimatorSwither(Fireman1, 0);
+        AnimatorSwither(Fireman2, 0);
     }
 
 

@@ -71,6 +71,17 @@ public class SoundController : MonoBehaviour
         
     }
 
+    public void PlayFaster()
+    {
+        if (musicSource.pitch < 2.0f)
+            musicSource.pitch += 0.005f;
+    }
+
+    public void NormalizeSound()
+    {
+        musicSource.pitch = 1.75f;
+    }
+
     IEnumerator PlaySoundCorutine(SoundType type)
     {
         AudioSource soundSource = this.gameObject.AddComponent< AudioSource>();

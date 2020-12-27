@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1246584554731103536}
   - component: {fileID: 1246584555040371266}
   - component: {fileID: 1246584554731103537}
+  - component: {fileID: 2662778767794026636}
   m_Layer: 0
   m_Name: SondController
   m_TagString: Untagged
@@ -162,3 +163,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c6061174bd56b0b469127a0f2cf605ff, type: 3}
   - {fileID: 8300000, guid: e0b42540396e80a4088339aa7cb8dee7, type: 3}
   - {fileID: 8300000, guid: 599cc865c8251b84280f52a480175a83, type: 3}
+--- !u!114 &2662778767794026636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246584554731103550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0a9464b180b4d46a196832d67ee5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

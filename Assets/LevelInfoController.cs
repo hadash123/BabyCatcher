@@ -39,6 +39,12 @@ public class LevelInfoController : MonoBehaviour
     [Range(10f, 100f)]
     public int SlowPantchPower = 50;
 
+    [Header("Player Controller :")]
+    public ControllerType controllerType;
+    public GameObject ArrowLeft;
+    public GameObject ArrowRight;
+
+
     public bool IsPause = false;
 
 
@@ -47,7 +53,12 @@ public class LevelInfoController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        controllerType = GameModeController.CONTROLTYPE;
+        ArrowLeft.SetActive(GameModeController.CONTROLTYPE == ControllerType.BUTTONS);
+        ArrowRight.SetActive(GameModeController.CONTROLTYPE == ControllerType.BUTTONS);
+
+        if (SoundController.IsInitialized)
+            SoundController.GetSingleton.NormalizeSound();
         controller = this;
         controller.levelScore = 0;
         controller.lifes = 5;
@@ -57,6 +68,14 @@ public class LevelInfoController : MonoBehaviour
     {
         get{
             return controller;
+        }
+    }
+
+    public bool IsInitialized
+    {
+        get
+        {
+            return controller == null;
         }
     }
 

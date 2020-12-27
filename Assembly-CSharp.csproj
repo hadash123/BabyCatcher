@@ -65,17 +65,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Baby.cs" />
+    <Compile Include="Assets\BestScore.cs" />
     <Compile Include="Assets\ButtonClickController.cs" />
+    <Compile Include="Assets\FaceBookController.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\ConsoleBase.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\LogView.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\MenuBase.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AccessTokenMenu.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppEvents.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppInvites.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppLinks.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppRequests.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\DialogShare.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GraphRequest.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\MainMenu.cs" />
+    <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\Pay.cs" />
+    <Compile Include="Assets\GameModeController.cs" />
     <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\GamePlay.cs" />
     <Compile Include="Assets\LevelInfoController.cs" />
+    <Compile Include="Assets\LevelUp.cs" />
     <Compile Include="Assets\LifeBar.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\ScoreEffectController.cs" />
+    <Compile Include="Assets\SharedVariables.cs" />
     <Compile Include="Assets\SoundController.cs" />
     <Compile Include="Assets\SoundPanel.cs" />
     <Compile Include="Assets\Trampoline.cs" />
     <Compile Include="Assets\Window.cs" />
+    <None Include="Assets\FacebookSDK\link.xml" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.12f1/uNITY5.5/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -252,6 +270,21 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.12f1/uNITY5.5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Gameroom">
+      <HintPath>D:/UnityProject/BabyCatcher/BabyCatcher/Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll</HintPath>
+    </Reference>
+    <Reference Include="FacebookNamedPipeClient">
+      <HintPath>D:/UnityProject/BabyCatcher/BabyCatcher/Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Canvas">
+      <HintPath>D:/UnityProject/BabyCatcher/BabyCatcher/Assets/FacebookSDK/Plugins/Canvas/Facebook.Unity.Canvas.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity">
+      <HintPath>D:/UnityProject/BabyCatcher/BabyCatcher/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>D:/UnityProject/BabyCatcher/BabyCatcher/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.12f1/uNITY5.5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

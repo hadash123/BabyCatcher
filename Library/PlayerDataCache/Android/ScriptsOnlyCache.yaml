@@ -2,17 +2,24 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Baby
+    - BestScore
     - ButtonClickController
+    - FaceBookController
+    - GameModeController
     - GameOver
     - GamePlay
     - LevelInfoController
+    - LevelUp
     - LifeBar
     - PauseMenu
     - ScoreEffectController
+    - SharedVariables
     - SoundController
     - SoundPanel
     - Trampoline
     - Window
+    Facebook.Unity.Settings.dll:
+    - Facebook.Unity.Settings.FacebookSettings
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -26,8 +33,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -35,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -83,33 +93,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11552}
     - Class: 114
-      Script: {instanceID: 11606}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 12272}
+      Script: {instanceID: 11888}
     - Class: 114
-      Script: {instanceID: 12558}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12748}
+      Script: {instanceID: 12560}
     - Class: 114
-      Script: {instanceID: 13110}
+      Script: {instanceID: 12750}
     - Class: 114
-      Script: {instanceID: 13366}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 13744}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 13960}
     - Class: 114
-      Script: {instanceID: 14240}
+      Script: {instanceID: 14184}
     - Class: 114
-      Script: {instanceID: 14358}
+      Script: {instanceID: 14242}
     - Class: 114
-      Script: {instanceID: 54530}
+      Script: {instanceID: 14292}
+    - Class: 114
+      Script: {instanceID: 14360}
+    - Class: 114
+      Script: {instanceID: 15854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -166,19 +180,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11552}
     - Class: 114
-      Script: {instanceID: 11606}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 12272}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12748}
+      Script: {instanceID: 12750}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 13610}
     - Class: 114
-      Script: {instanceID: 13742}
+      Script: {instanceID: 13744}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 13962}
     - Class: 114
-      Script: {instanceID: 14358}
+      Script: {instanceID: 14360}
+    - Class: 114
+      Script: {instanceID: 41816}
+    - Class: 114
+      Script: {instanceID: 46314}
+    - Class: 114
+      Script: {instanceID: 47180}
+    - Class: 114
+      Script: {instanceID: 48832}
+    - Class: 114
+      Script: {instanceID: 49174}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -270,6 +294,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -674,7 +704,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: ed17daf5c6d21697a6ebf2b0e0498250
+      Hash: 3183adf9f9c605939062d569a3c3b163
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelInfoController
@@ -746,10 +776,208 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: 0bd9e9ef297b5f21b53a11d95e014c07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelUp
+  - hash:
+      serializedVersion: 2
+      Hash: 3e421ad3d01706f8b5a0f15ec07b1693
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameModeController
+  - hash:
+      serializedVersion: 2
+      Hash: afdd0854524c8d98711d9b8b1e3cb89c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SharedVariables
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PauseMenu
+    className: BestScore
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Mobile.Android
+    className: AndroidFacebookGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Mobile.Android
+    className: AndroidFacebookLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity
+    className: AsyncRequestString
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Canvas
+    className: CanvasFacebookGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Canvas
+    className: CanvasFacebookLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Editor
+    className: EditorFacebookGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Editor
+    className: EditorFacebookLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Editor.Dialogs
+    className: EmptyMockDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity
+    className: FacebookScheduler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity
+    className: FB
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Gameroom
+    className: GameroomFacebookGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Gameroom
+    className: GameroomFacebookLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Mobile.IOS
+    className: IOSFacebookGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Mobile.IOS
+    className: IOSFacebookLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Canvas
+    className: JsBridge
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Editor.Dialogs
+    className: MockLoginDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Facebook.Unity.dll
+    namespaceName: Facebook.Unity.Editor.Dialogs
+    className: MockShareDialog
+  - hash:
+      serializedVersion: 2
+      Hash: a01528258fe67fa484658e5b5d14c189
+    assemblyName: Facebook.Unity.Settings.dll
+    namespaceName: Facebook.Unity.Settings
+    className: FacebookSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: AppEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: AccessTokenMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: Pay
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: AppLinks
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: DialogShare
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: GraphRequest
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: LogView
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: ConsoleBase
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: AppInvites
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Facebook.Unity.Example
+    className: AppRequests
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FaceBookController
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainPage.unity

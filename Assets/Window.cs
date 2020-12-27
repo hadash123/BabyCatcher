@@ -96,6 +96,7 @@ public class Window : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!LevelInfoController.GetSingletone.IsInitialized) return;
         if (LevelInfoController.GetSingletone.IsPause && this.status == WindowsStatus.OPEN)
         {
             this.ChangeWindowStatus();

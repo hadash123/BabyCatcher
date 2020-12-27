@@ -26,6 +26,10 @@ public class GameOver : MonoBehaviour
         this.gameObject.SetActive(true);
         LevelInfoController.GetSingletone.gameOverBoolean = true;
         ScoreText.text = LevelInfoController.GetSingletone.levelScore.ToString();
+        if(SharedVariables.IsInitialized)
+        {
+            SharedVariables.GetSingleton.Sawe(LevelInfoController.GetSingletone.levelScore);
+        }
     }
 
     public void Replay()
